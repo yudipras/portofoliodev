@@ -120,4 +120,32 @@ class Model_pegawai extends CI_Model
   }
 
 
+  public function dikpim($offset,$limit,$que)
+    {
+        $query = $this->db->query("SELECT * FROM ".
+                                 "(SELECT a.idx, a.nip as NIP, b.nama, MIN"."(a.diklat)"." as diklat_terbaru, a.tahun_diklat,
+                                  b.UnitKerja2, b.UnitKerja3, b.UnitKerja4 
+                                  from r_diklat a
+                                 INNER JOIN pegawai_aktif__ b ON a.nip = b.nip
+                                 WHERE a.diklat LIKE \"%diklatpim%\"
+                                 GROUP BY NIP)"."as sortir
+                                 WHERE sortir.diklat_terbaru LIKE \"%".$que."%\" LIMIT $offset, $limit ");
+        return $query->result();
+
+
+    }
+
+    public function total_dikpim($que)
+    {
+        $query = $this->db->query("SELECT * FROM ".
+                                 "(SELECT a.idx, a.nip, b.nama, MIN"."(a.diklat)"." as diklat_terbaru, a.tahun_diklat from r_diklat a
+                                 INNER JOIN pegawai_aktif__ b ON a.nip = b.nip
+                                 WHERE a.diklat LIKE \"%diklatpim%\"
+                                 GROUP BY NIP)"."as sortir
+                                 WHERE sortir.diklat_terbaru LIKE \"%".$que."%\" ");
+        return $query->num_rows();
+
+    }
+
+
 }

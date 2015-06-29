@@ -72,12 +72,12 @@
 
                     <tr><th width="35%">NIP </th><th width="3%">:</th><td><?php echo $detail_pegawai->NIP;?></td></tr>
                     <tr><th width="35%">Nama </th><th width="3%">:</th><td><?php echo $detail_pegawai->nama;?></td></tr>
-                    <tr><th width="35%">Tempat, Tanggal Lahir </th><th width="3%">:</th><td><?php echo $detail_pegawai->tempat_lahir.", ".$detail_pegawai->tgl_lahir;?></td></tr>
+                    <tr><th width="35%">Tempat, Tanggal Lahir </th><th width="3%">:</th><td><?php echo $detail_pegawai->tempat_lahir.", ".cnvdateindo($detail_pegawai->tgl_lahir);?></td></tr>
                     <tr><th width="35%">Jenis Kelamin </th><th width="3%">:</th><td><?php echo $detail_pegawai->JenisKelamin;?></td></tr>
                     <tr><th width="35%">Agama </th><th width="3%">:</th><td><?php echo $detail_pegawai->agama;?></td></tr>
                     <!-- <tr><th width="35%">Alamat </th><th width="3%">:</th><td><?php //echo $detail_pegawai->alamat." ".$detail_pegawai->rt."/".$detail_pegawai->rw.", ".$detail_pegawai->kel.", ".$detail_pegawai->kec.", ". $detail_pegawai->kotamadya.", ".$detail_pegawai->propinsi;?></td></tr> -->
                     <tr><th width="35%">Setatus Pegawai </th><th width="3%">:</th><td><?php echo $detail_pegawai->status_peg;?></td></tr>
-                    <tr><th width="35%">Tanggal Mulai CPNS / PNS </th><th width="3%">:</th><td><?php echo $detail_pegawai->tgl_mulai_CPNS."/".$detail_pegawai->tgl_mulai_PNS;?></td></tr>
+                    <tr><th width="35%">Tanggal Mulai CPNS / PNS </th><th width="3%">:</th><td><?php echo cnvdateindo($detail_pegawai->tgl_mulai_CPNS)."/ ".cnvdateindo($detail_pegawai->tgl_mulai_PNS);?></td></tr>
                     <tr><th width="35%">Gol / Pangkat </th><th width="3%">:</th><td><?php echo $detail_pegawai->gol." - ".$detail_pegawai->pangkat;?></td></tr>
                     <tr><th width="35%">Jabatan </th><th width="3%">:</th><td><?php echo $detail_pegawai->jabatan;?></td></tr>
                     <tr><th width="35%">Unit Kerja </th><th width="3%">:</th><td><?php echo $detail_pegawai->UnitKerja4." <br> ".$detail_pegawai->UnitKerja3." <br> ".$detail_pegawai->UnitKerja2;?></td></tr>

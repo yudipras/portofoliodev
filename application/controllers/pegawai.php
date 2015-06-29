@@ -149,4 +149,43 @@ class Pegawai extends CI_Controller {
     $this->load->view("pegawai",$data);
   }
 
+
+  public function dikpim($no)
+  {
+    $que = "diklatpim ".$no."";
+
+    
+
+    $total_row = $this->model_pegawai->total_dikpim($que);
+
+    $config["base_url"] = base_url() . "pegawai/dikpim/".$no."";
+    $config["uri_segment"] = 4;
+    $config["total_rows"] = $total_row;
+    $config["per_page"] = 20;
+    $config["use_page_numbers"] = TRUE;
+    $config["num_links"] = $total_row;
+    $config["index_limit"] = 10;
+
+    $limit = $config["per_page"];
+
+    if($this->uri->segment(4)){
+        $offset = (($this->uri->segment(4)) - 1) * $limit ;
+    }
+    else{
+        $offset = 0;
+    }
+
+    $this->pagination->initialize($config);
+    $data["pagination"] = $this->pagination->create_links();
+
+    $data["pegawai"] = $this->model_pegawai->dikpim($offset,$limit,$que);
+    //echo $pagination;
+
+    $data["offset"] = $offset;
+    $data["total_row"] = $total_row;
+    $data["dikpim"] = "Diklat Pimpinan ".$no."";
+    // print_r($offset);
+    $this->load->view("pegawai",$data);
+  }
+
 }

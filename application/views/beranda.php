@@ -100,17 +100,17 @@
             <!-- /widget-header -->
             <div class="widget-content">
               <div class="shortcuts">
-                <a href="javascript:;" class="shortcut">
-                  <span class="shortcut-label"> <h1><?php echo $pim1;?></h1> Dik Pim 1</span>
+                <a href="<?php echo base_url();?>pegawai/dikpim/1" class="shortcut">
+                  <span class="shortcut-label"> <h1><?php echo $pim1;?></h1> DiklatPim 1</span>
                 </a>
-                <a href="javascript:;" class="shortcut">
-                  <span class="shortcut-label"><h1><?php echo $pim2;?></h1>Dik Pim 2</span>
+                <a href="<?php echo base_url();?>pegawai/dikpim/2" class="shortcut">
+                  <span class="shortcut-label"><h1><?php echo $pim2;?></h1>DiklatPim 2</span>
                 </a>
-                <a href="javascript:;" class="shortcut">
-                  <span class="shortcut-label"><h1><?php echo $pim3;?></h1>Dik Pim 3</span>
+                <a href="<?php echo base_url();?>pegawai/dikpim/3" class="shortcut">
+                  <span class="shortcut-label"><h1><?php echo $pim3;?></h1>DiklatPim 3</span>
                 </a>
-                <a href="javascript:;" class="shortcut">
-                  <span class="shortcut-label"><h1><?php echo $pim4;?></h1>Dik Pim 4</span>
+                <a href="<?php echo base_url();?>pegawai/dikpim/4" class="shortcut">
+                  <span class="shortcut-label"><h1><?php echo $pim4;?></h1>DiklatPim 4</span>
                 </a>
               </div>
               <!-- /shortcuts -->

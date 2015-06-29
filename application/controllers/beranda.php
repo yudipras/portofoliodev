@@ -61,4 +61,7 @@ class Beranda extends CI_Controller {
 
     echo $table;
   }
+
+  
+
 }

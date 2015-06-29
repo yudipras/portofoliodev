@@ -64,7 +64,8 @@
         <div class="span12">
           <div class="widget widget-nopad">
             <div class="widget-header"> <i class="icon-list-alt"></i>
-              <h3> Daftar Pegawai <?php echo $this->session->userdata('uu3')." "; echo $this->session->userdata('uu2');?></h3>
+              <h3> Daftar Pegawai <?php if($dikpim!="")echo $dikpim;?></h3>
+               <!-- echo $this->session->userdata('uu3')." "; echo $this->session->userdata('uu2'); -->
             </div>
             <!-- /widget-header -->
             <div class="widget-content">

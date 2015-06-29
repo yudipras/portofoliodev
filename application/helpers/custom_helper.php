@@ -22,14 +22,14 @@
   }
 
   function cnvdateindo($date){
-    $array_bulan = (1=>"Januari","Febuari","Maret","April","Mei","Juni","Juli",
-                    "Agustus","September","Oktober","November","Desember");
+    $array_bulan = array("01"=>"Januari","02"=>"Febuari","03"=>"Maret","04"=>"April","05"=>"Mei","06"=>"Juni","07"=>"Juli",
+                    "08"=>"Agustus","09"=>"September","10"=>"Oktober","11"=>"November","12"=>"Desember");
     $datesplit = explode("-",$date);
     $tanggal = $datesplit[2];
     $bulan = $array_bulan[$datesplit[1]];
     $tahun = $datesplit[0];
 
-    $dateindo = $tanggal."-".$bulan."-".$tahun;
+    $dateindo = $tanggal." ".$bulan." ".$tahun;
     return $dateindo;
   }
 
