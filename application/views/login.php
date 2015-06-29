@@ -34,7 +34,7 @@
       </a>
       
       <a class="brand" href="index.html">
-        Aplikasi Portofolio Dinas Dikdasmen      
+        Aplikasi Penilaian Portofolio Pegawai      
       </a>    
       
       
