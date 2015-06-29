@@ -16,7 +16,7 @@
 | environments.
 |
 */
-$config['base_url'] = 'http://portofolio.dev/';
+$config['base_url'] = 'http://localhost/portofoliodev';
 
 /*
 |--------------------------------------------------------------------------
