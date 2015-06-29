@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Pegawai - Portofolio</title>
+<title>Detail Pegawai - Portofolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link href="<?php echo base_url(); ?>asset/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">Aplikasi Portofolio Dinas Dikdasmen </a>
+      <a class="brand" href="#">Aplikasi Penilaian Portofolio Pegawai  </a>
 
       <!--/.nav-collapse -->
     </div>
@@ -38,7 +38,7 @@
         <li><a href="<?php echo base_url();?>komparasi"><i class="icon-archive"></i><span>Komparasi</span> </a></li>
 
       </ul>
-	<ul class="mainnav pull-right">
+  <ul class="mainnav pull-right">
         <li><a href="<?php echo base_url();?>logout"><i class="icon-signout"></i><span>Sign Out</span> </a> </li>
 
       </ul>
@@ -75,14 +75,16 @@
                     <tr><th width="35%">Tempat, Tanggal Lahir </th><th width="3%">:</th><td><?php echo $detail_pegawai->tempat_lahir.", ".$detail_pegawai->tgl_lahir;?></td></tr>
                     <tr><th width="35%">Jenis Kelamin </th><th width="3%">:</th><td><?php echo $detail_pegawai->JenisKelamin;?></td></tr>
                     <tr><th width="35%">Agama </th><th width="3%">:</th><td><?php echo $detail_pegawai->agama;?></td></tr>
-                    <tr><th width="35%">Alamat </th><th width="3%">:</th><td><?php echo $detail_pegawai->alamat." ".$detail_pegawai->rt."/".$detail_pegawai->rw.", ".$detail_pegawai->kel.", ".$detail_pegawai->kec.", ". $detail_pegawai->kotamadya.", ".$detail_pegawai->propinsi;?></td></tr>
+                    <!-- <tr><th width="35%">Alamat </th><th width="3%">:</th><td><?php //echo $detail_pegawai->alamat." ".$detail_pegawai->rt."/".$detail_pegawai->rw.", ".$detail_pegawai->kel.", ".$detail_pegawai->kec.", ". $detail_pegawai->kotamadya.", ".$detail_pegawai->propinsi;?></td></tr> -->
                     <tr><th width="35%">Setatus Pegawai </th><th width="3%">:</th><td><?php echo $detail_pegawai->status_peg;?></td></tr>
                     <tr><th width="35%">Tanggal Mulai CPNS / PNS </th><th width="3%">:</th><td><?php echo $detail_pegawai->tgl_mulai_CPNS."/".$detail_pegawai->tgl_mulai_PNS;?></td></tr>
                     <tr><th width="35%">Gol / Pangkat </th><th width="3%">:</th><td><?php echo $detail_pegawai->gol." - ".$detail_pegawai->pangkat;?></td></tr>
-                    <tr><th width="35%">Jabatan </th><th width="3%">:</th><td><?php echo $detail_pegawai->status_peg;?></td></tr>
+                    <tr><th width="35%">Jabatan </th><th width="3%">:</th><td><?php echo $detail_pegawai->jabatan;?></td></tr>
                     <tr><th width="35%">Unit Kerja </th><th width="3%">:</th><td><?php echo $detail_pegawai->UnitKerja4." <br> ".$detail_pegawai->UnitKerja3." <br> ".$detail_pegawai->UnitKerja2;?></td></tr>
 
                   </table>
+                  <br>
+                  <br>
                 </div>
               </div>
 
@@ -90,10 +92,70 @@
             </div>
           </div>
         </div>
+
         <div class="span3">
           <div class="widget">
             <div class="widget-header"> <i class="icon-star"></i>
               <h3> Nilai Pegawai</h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <table class="table table-striped table-hover tablefont tblright" cellspacing="0">
+                    <!-- <tr><th width="35%">Total Nilai :</th></tr> -->
+                    <tr><th width="35%"><center><h1 style="font-size:40pt" >0</h1></center></th></tr>
+                    <!-- <tr><th width="35%"></th></tr> -->
+
+              </table>
+              <i><span style="font-size:10pt" >*Total Nilai Administrasi dan SKP</span></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="span3">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-star"></i>
+              <h3> Aspek Administrasi</h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <table class="table table-striped table-hover tablefont tblright" cellspacing="0">
+                    <!-- <tr><th width="35%">Total Nilai :</th></tr> -->
+                    <tr><th width="35%"><center><h1 style="font-size:40pt" ><?php echo $nilai_pegawai['total'];?></h1></center></th></tr>
+                    <!-- <tr><th width="35%"></th></tr> -->
+
+              </table>
+              <i><span style="font-size:10pt" >*Total Nilai Administrasi x 30%</span></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="span3">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-star"></i>
+              <h3> Aspek SKP</h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <table class="table table-striped table-hover tablefont tblright" cellspacing="0">
+                    <!-- <tr><th width="35%">Total Nilai :</th></tr> -->
+                    <tr><th width="35%"><center><h1 style="font-size:40pt" >0</h1></center></th></tr>
+                    <!-- <tr><th width="35%"></th></tr> -->
+
+              </table>
+              <i><span style="font-size:10pt" >*Total Nilai SKP x 70%</span></i>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="row">
+
+        <div class="span6">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-star"></i>
+              <h3> Aspek Administrasi (30%)</h3>
             </div>
             <!-- /widget-header -->
             <div class="widget-content">
@@ -103,9 +165,38 @@
 
                     <tr><th width="35%">Pendidikan</th><th width="3%">:</th><td><?php echo $nilai_pegawai['pendidikan'];?></td></tr>
                     <tr><th width="35%">Diklat Pimpinan </th><th width="3%">:</th><td><?php echo $nilai_pegawai['diklat_pim'];?></td></tr>
+                    <tr><th width="35%">Diklat Teknis Fungsional </th><th width="3%">:</th><td>0</td></tr>
                     <tr><th width="35%">Golongan  </th><th width="3%">:</th><td><?php echo $nilai_pegawai['golongan'];?></td></tr>
                     <tr><th width="35%">Masa Kerja </th><th width="3%">:</th><td><?php echo $nilai_pegawai['masa_kerja'];?></td></tr>
-                    <tr><th width="35%">Total </th><th width="3%">:</th><td><h1><?php echo $nilai_pegawai['total'];?></h1></td></tr>
+                    <tr><th width="35%">Total Administrasi </th><th width="3%">:</th><td><h2><?php echo $nilai_pegawai['total'];?></h2></td></tr>
+
+
+              </table>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="span6">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-star"></i>
+              <h3> Aspek SKP (70%)</h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+
+
+              <table class="table table-striped table-hover tablefont tblright" cellspacing="0">
+
+                    <tr><th width="35%">Orientasi Pelayanan</th><th width="3%">:</th><td>0</td></tr>
+                    <tr><th width="35%">Integritas</th><th width="3%">:</th><td>0</td></tr>
+                    <tr><th width="35%">Komitmen</th><th width="3%">:</th><td>0</td></tr>
+                    <tr><th width="35%">Disiplin</th><th width="3%">:</th><td>0</td></tr>
+                    <tr><th width="35%">Kerjasama</th><th width="3%">:</th><td>0</td></tr>
+                    <tr><th width="35%">Kepemimpinan</th><th width="3%">:</th><td>0</td></tr>
+                    
+                    <tr><th width="35%">Total SKP </th><th width="3%">:</th><td><h1>0</h1></td></tr>
 
 
               </table>
@@ -302,7 +393,7 @@
   <div class="footer-inner">
     <div class="container">
       <div class="row">
-        <div class="span12"> &copy; 2015 Aplikasi Portofolio Dinas Dikdasmen - Kemendikbud. </div>
+        <div class="span12"> &copy; 2015 Aplikasi Penilaian Portofolio Pegawai  - Kemendikbud. </div>
         <!-- /span12 -->
       </div>
       <!-- /row -->

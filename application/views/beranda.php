@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Komparasi - Portofolio</title>
+<title>Beranda - Portofolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link href="<?php echo base_url(); ?>asset/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="index.html">Aplikasi Portofolio Dinas Dikdasmen </a>
+      <a class="brand" href="index.html">Aplikasi Penilaian Portofolio Pegawai  </a>
 
       <!--/.nav-collapse -->
     </div>
@@ -63,7 +63,7 @@
 
 
       <div class="row">
-        <div class="span6">
+        <div class="span7">
           <div class="widget" style="height:550px;">
             <div class="widget-header"> <i class="icon-bookmark"></i>
               <h3>Top List Pegawai</h3>
@@ -92,7 +92,7 @@
             <!-- /widget-content -->
           </div>
         </div>
-        <div class="span6">
+        <div class="span5">
           <div class="widget">
             <div class="widget-header"> <i class="icon-bookmark"></i>
               <h3>Diklat Pim</h3>
@@ -131,7 +131,7 @@
   <div class="footer-inner">
     <div class="container">
       <div class="row">
-        <div class="span12"> &copy; 2015 Aplikasi Portofolio Dinas Dikdasmen - Kemendikbud. </div>
+        <div class="span12"> &copy; 2015 Aplikasi Penilaian Portofolio Pegawai - Kemendikbud. </div>
         <!-- /span12 -->
       </div>
       <!-- /row -->

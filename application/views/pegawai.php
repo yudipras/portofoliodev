@@ -20,7 +20,7 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">Aplikasi Portofolio Dinas Dikdasmen</a>
+      <a class="brand" href="#">Aplikasi Penilaian Portofolio Pegawai </a>
 
       <!--/.nav-collapse -->
     </div>
@@ -128,7 +128,7 @@
   <div class="footer-inner">
     <div class="container">
       <div class="row">
-        <div class="span12"> &copy; 2015 Aplikasi Portofolio Dinas Dikdasmen - Kemendikbud. </div>
+        <div class="span12"> &copy; 2015 Aplikasi Penilaian Portofolio Pegawai - Kemendikbud. </div>
         <!-- /span12 -->
       </div>
       <!-- /row -->

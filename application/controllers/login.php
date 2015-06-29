@@ -74,7 +74,7 @@ class Login extends CI_Controller
 
 
                 }
-				redirect('pegawai');
+				redirect('beranda');
 			}
 			else
 			{
